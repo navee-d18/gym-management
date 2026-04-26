@@ -22,5 +22,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/membership', membershipRoutes);
 app.use('/api/contact', contactRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Gym Backend Running Successfully 🚀');
+});
+
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
